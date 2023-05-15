@@ -6,3 +6,9 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8080:8080"
+  openapi-generator:
+    build:
+      context: docker/openapi-generator
+      dockerfile: Dockerfile
+    volumes:
+      - ./target:/usr/src/app/modules/openapi-generator-cli/target

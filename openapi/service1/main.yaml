@@ -1,0 +1,21 @@
+# main.yaml
+openapi: 3.0.1
+info:
+  title: Service1 API
+  version: 1.0.0
+paths:
+  /user:
+    $ref: './paths/user.yaml'
+components:
+  schemas:
+    User:
+      $ref: './components/schemas/User.yaml'
+  responses:
+    NotFound:
+      $ref: './components/responses/NotFound.yaml'
+  parameters:
+    Sorting:
+      $ref: './components/parameters/Sorting.yaml'
+security:
+  - SecurityScheme:
+      $ref: './security/SecurityScheme.yaml'

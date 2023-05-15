@@ -17,14 +17,22 @@ must
 
 ## 状況
 
-- Swagger UI
-  - xxxx
-- ReDoc
-  - xxxx
-
+- ファイル分割での管理・結合ツール
+  - openapi-generator-cli
+- viewer(API操作可能)
+  - Swagger UI
+- viewer(ドキュメント表示特化)
+  - ReDoc
+- mock
+  - Prism
 
 ## 環境構築
 
 最新版で試したいのでdocker hubのイメージは使わずに行う。ただ、基本はdocker hubのDockerfileを参考にする
 
+## OpenAPIの生成
+
+```
+openapi-generator generate -i ./openapi/service1/main.yaml -g openapi -o ./gen/service1/
+```
 
