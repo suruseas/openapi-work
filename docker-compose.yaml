@@ -6,6 +6,10 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8080:8080"
+    volumes:
+      - ./gen/service1/openapi/openapi.yaml:/openapi.yaml
+    environment:
+      SWAGGER_JSON: /openapi.yaml
   openapi-generator:
     build:
       context: docker/openapi-generator
@@ -13,3 +17,11 @@ services:
     volumes:
       - ./openapi:/openapi # input
       - ./gen:/gen         # output
+  redoc:
+    image: redocly/redoc:latest
+    ports:
+      - "8081:80"
+    volumes:
+      - ./gen/service1/openapi:/usr/share/nginx/html/openapi/
+    environment:
+      SPEC_URL: openapi/openapi.yaml
