@@ -1,7 +1,6 @@
 get:
   summary: Returns a list of users
   parameters:
-    - $ref: '../components/parameters/Paging.yaml'
     - $ref: '../components/parameters/Sorting.yaml'
   responses:
     '200':

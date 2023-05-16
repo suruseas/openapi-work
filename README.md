@@ -33,6 +33,6 @@ must
 ## OpenAPIの生成
 
 ```
-openapi-generator generate -i ./openapi/service1/main.yaml -g openapi -o ./gen/service1/
+dc run openapi-generator generate -i /openapi/service1/main.yaml -g openapi-yaml -o /gen/service1/
 ```
 

@@ -11,4 +11,5 @@ services:
       context: docker/openapi-generator
       dockerfile: Dockerfile
     volumes:
-      - ./target:/usr/src/app/modules/openapi-generator-cli/target
+      - ./openapi:/openapi # input
+      - ./gen:/gen         # output
