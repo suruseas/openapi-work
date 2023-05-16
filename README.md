@@ -28,7 +28,8 @@ must
 
 ## 環境構築
 
-最新版で試したいのでdocker hubのイメージは使わずに行う。ただ、基本はdocker hubのDockerfileを参考にする
+最新版で試したいので基本的にdocker hubのイメージは使わずに行う。
+ただし、prefixItemsがすでに使えるサービスはimageでもOKとする
 
 ## OpenAPIの生成
 
