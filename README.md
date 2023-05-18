@@ -19,12 +19,22 @@ must
 
 - ファイル分割での管理・結合ツール
   - openapi-generator-cli
+  - 🙅‍♀️ prefixItems は利用できない
 - viewer(API操作可能)
   - Swagger UI
+  - 🙅‍♀️ prefixItems は利用できない
 - viewer(ドキュメント表示特化)
   - ReDoc
+  - 🙆‍♀️ prefixItems が表現できる
 - mock
   - Prism
+  - 🙅‍♀️ prefixItems は利用できない
+
+## 優先順位
+
+- Prism
+- openapi-generator-cli
+- Swagger UI
 
 ## 環境構築
 
