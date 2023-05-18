@@ -19,5 +19,6 @@ items:
       example: George Orwell.
 minItems: 3
 maxItems: 3
+additionalItems: false
 description: >-
   The array positions have meaning. The first item is the ID, the second is the book name, and the third is the book author.
