@@ -1,0 +1,15 @@
+get:
+  summary: Returns a list of books
+  parameters:
+    - $ref: '../components/parameters/Sorting.yaml'
+  responses:
+    '200':
+      description: successful operation
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '../components/schemas/Book.yaml'
+    '404':
+      $ref: '../components/responses/NotFound.yaml'

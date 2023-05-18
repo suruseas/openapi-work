@@ -6,12 +6,16 @@ info:
 servers:
   - url: http://localhost:8082
 paths:
-  /user:
-    $ref: './paths/user.yaml'
+  /users:
+    $ref: './paths/users.yaml'
+  /books:
+    $ref: './paths/books.yaml'
 components:
   schemas:
     User:
       $ref: './components/schemas/User.yaml'
+    Book:
+      $ref: './components/schemas/Book.yaml'
   responses:
     NotFound:
       $ref: './components/responses/NotFound.yaml'
