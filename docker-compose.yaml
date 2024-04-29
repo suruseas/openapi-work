@@ -32,3 +32,22 @@ services:
     command: mock -h 0.0.0.0 /openapi.yaml
     volumes:
       - ./gen/service1/openapi/openapi.yaml:/openapi.yaml
+  # openapi_mock:
+  #   image: muonsoft/openapi-mock
+  #   environment:
+  #     OPENAPI_MOCK_SPECIFICATION_URL: /etc/openapi/openapi.yaml
+  #   ports:
+  #     - "8083:8080"
+  #   volumes:
+  #     - ./gen/service1/openapi/:/etc/openapi
+  mocks-server:
+    build:
+      context: docker/mocks-server
+      dockerfile: Dockerfile
+    tty: true
+    stdin_open: true
+    command: /bin/bash
+    volumes:
+      - ./project2:/input
+    ports:
+      - "8084:3100"
